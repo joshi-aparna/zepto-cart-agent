@@ -7,7 +7,7 @@ from shopping_agent_models import (
     ShoppingOperation,
 )
 import asyncio
-from agent import handle_request
+from zepto_cart_agent.agent import handle_request
 
 
 class ZeptoAgent:
