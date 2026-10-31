@@ -17,3 +17,5 @@ venv/
 # Logs
 **/logs/
 order_history_cache.json
+
+**/*.egg-info

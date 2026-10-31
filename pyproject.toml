@@ -1,0 +1,34 @@
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zepto-cart-agent"
+version = "0.1.0"
+description = "Python agent for managing Zepto shopping carts"
+readme = "README.md"
+requires-python = ">=3.11"
+
+authors = [
+    {name = "Aparna Ravindra"}
+]
+
+dependencies = [
+    "fastmcp>=4.1.4,<5",
+    "langchain>=1.4.7,<2",
+    "langchain-core>=1.7.0,<2",
+    "langchain-ollama>=1.1.0,<2",
+    "py-key-value-aio>=0.4.6,<0.5",
+    "cryptography>=50.0.2,<51",
+    "pydantic>=2.14.1,<3",
+    "shopping-agent-models @ git+https://github.com/joshi-aparna/shopping-list-agent.git@shopping-agent-models-v0.1.0#subdirectory=shopping_agent_models"
+]
+
+[project.urls]
+Homepage = "https://github.com/joshi-aparna/zepto-cart-agent"
+Repository = "https://github.com/joshi-aparna/zepto-cart-agent"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["zepto_cart_agent*"]

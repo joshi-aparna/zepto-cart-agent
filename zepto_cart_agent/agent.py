@@ -14,8 +14,9 @@ from langchain.agents.structured_output import ProviderStrategy, ToolStrategy
 
 from pydantic.v1 import BaseModel
 from shopping_agent_models import CartAddResult, ShoppingItems, ClearCartResult, CartValue, ShoppingOperation
-from agent_trace import AgentTrace
-from zepto_tools_wrapper import create_zepto_tools
+
+from zepto_cart_agent.agent_trace import AgentTrace
+from zepto_cart_agent.zepto_tools_wrapper import create_zepto_tools
 
 
 TOOLS_BY_OPERATION = {
