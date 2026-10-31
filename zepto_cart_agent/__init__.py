@@ -1,3 +1,3 @@
-from zepto_cart_agent import ZeptoCartAgent
+from zepto_cart_agent import ZeptoAgent
 
-__all__ = ["ZeptoCartAgent"]
+__all__ = ["ZeptoAgent"]
