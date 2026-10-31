@@ -107,19 +107,19 @@ async def handle_request(operation: ShoppingOperation, text: str, response_model
             config={"callbacks": [AgentTrace()]},
         )
 
-        print("\nAgent response:")
-        print(result["messages"][-1].content)
-        print("Messages:")
-        for message in result["messages"]:
-            print(type(message).__name__, message.content)
-            print("Tool calls:", getattr(message, "tool_calls", None))
+        #print("\nAgent response:")
+        #print(result["messages"][-1].content)
+        #print("Messages:")
+        #for message in result["messages"]:
+        #    print(type(message).__name__, message.content)
+       #     print("Tool calls:", getattr(message, "tool_calls", None))
         final_response = result["messages"][-1].content
         structured_model = model.with_structured_output(
             response_model,
             method="json_schema",
         )
-        print("\n final_response:")
-        print(final_response)
+        #print("\n final_response:")
+        #print(final_response)
         structured_response = await structured_model.ainvoke(
             f"""
             Extract the information from this response into the requested schema.
@@ -129,8 +129,8 @@ async def handle_request(operation: ShoppingOperation, text: str, response_model
             {final_response}
             """
         )
-        print("\nStructured response:")
-        print(structured_response)
+        #print("\nStructured response:")
+        #print(structured_response)
         return structured_response
 
 
