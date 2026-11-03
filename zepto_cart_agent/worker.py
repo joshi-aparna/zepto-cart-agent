@@ -26,7 +26,7 @@ class ZeptoAgent:
             text += f" of {item.item} to my cart."
 
             try:
-                result = await handle_request(ShoppingOperation.CART_ADD, text)
+                result = await handle_request(ShoppingOperation.CART_ADD, text, CartAddResult)
                 results.append(
                     CartAddResult(
                         item=item.item,
