@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+build/
 
 # Secrets and local configuration
 .env
