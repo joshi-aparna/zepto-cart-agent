@@ -23,7 +23,7 @@ dependencies = [
     "cryptography>=50.0.2,<51",
     "pydantic>=2.14.1,<3",
     "shopping-agent-models @ git+https://github.com/joshi-aparna/shopping-list-agent.git@shopping-agent-models-v0.1.0#subdirectory=shopping_agent_models",
-    "llm-gateway @ git+https://github.com/joshi-aparna/model-gateway.git@v0.1.0"
+    "llm-gateway @ git+https://github.com/joshi-aparna/model-gateway.git@v0.1.1"
 ]
 
 [project.urls]

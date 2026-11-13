@@ -2,10 +2,8 @@ nvidia:
   base_url: https://integrate.api.nvidia.com/v1
   api_key_env: NVIDIA_API_KEY
   models:
-    - id: nvidia/nemotron-3.5-bolt-e4b
-      aliases: [fast]
     - id: nvidia/nemotron-3.5-super-vl-120b-a12b
-      aliases: [structured, fast]
+      aliases: [fast]
     - id: minimaxai/minimax-m3.1-flash
       aliases: [structured, slow]
 

@@ -8,8 +8,6 @@ from shopping_agent_models import (
 )
 import asyncio
 from zepto_cart_agent.agent import handle_request
-
-
 class ZeptoAgent:
 
     async def cartadd(
@@ -72,7 +70,7 @@ zepto_agent: ShoppingAgent = ZeptoAgent()
 
 if __name__ == "__main__":
     from dotenv import load_dotenv
-    load_dotenv(".env")
+    load_dotenv()
     command = input("Command (add to cart,view cart, clear cart,cart value): \n")
     command = command.strip().lower()
     command = "view cart" if command.startswith("view") else "add to cart" if command.startswith("add") else "clear cart" if command.startswith("clear") else "cart value" if command.startswith("cart value") else "unknown"
