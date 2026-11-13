@@ -15,7 +15,6 @@ from zepto_cart_agent.agent_trace import AgentTrace
 CACHE_FILE = Path(__file__).resolve().parent.parent / "order_history_cache.json"
 CACHE_TTL = 1800
 MODEL_NAME = os.getenv("OLLAMA_MODEL", "qwen3:30b")
-llm_gateway_config_path = os.environ.get("LLM_GATEWAY_CONFIG", "llm-gateway-config.yaml")
 
 model = ChatOllama(model=MODEL_NAME, temperature=0)
 
@@ -97,6 +96,7 @@ async def filter_history(products: list[dict], query: str) -> list[dict]:
         SystemMessage(content=system_prompt),
         HumanMessage(content=user_prompt),
     ]
+    llm_gateway_config_path = os.environ.get("LLM_GATEWAY_CONFIG", "random-path")
     with LLMGateway.from_config(llm_gateway_config_path) as gateway:
         agent = create_agent(
                 model=model,
